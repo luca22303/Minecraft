@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "io.github.luca22303.winterwonderland.client.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

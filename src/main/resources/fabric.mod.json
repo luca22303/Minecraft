@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "winterwonderland",
+	"version": "${version}",
+	"name": "Winter Wonderland",
+	"description": "A cozy, immersive winter ambience mod - turn your world into a snowy wonderland.",
+	"authors": [
+		"luca22303"
+	],
+	"contact": {
+		"sources": "https://github.com/luca22303/Minecraft"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/winterwonderland/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.luca22303.winterwonderland.WinterWonderland"
+		],
+		"client": [
+			"io.github.luca22303.winterwonderland.client.WinterWonderlandClient"
+		]
+	},
+	"mixins": [
+		"winterwonderland.mixins.json",
+		{
+			"config": "winterwonderland.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
