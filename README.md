@@ -3,7 +3,7 @@
 A cozy, immersive winter ambience mod for **Minecraft 26.3** (Fabric).
 Designed to be combined with world-generation mods for a snowy winter playthrough.
 
-> Status: early setup - features are still being designed.
+> Status: early setup. See [DESIGN.md](DESIGN.md) for the planned features.
 
 ## Requirements
 
