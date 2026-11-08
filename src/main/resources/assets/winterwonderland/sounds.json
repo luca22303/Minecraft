@@ -1,0 +1,81 @@
+{
+  "ambient.wind_loop": {
+    "subtitle": "winterwonderland.subtitle.wind",
+    "sounds": [
+      {
+        "name": "minecraft:item/elytra/elytra_loop",
+        "stream": true
+      }
+    ]
+  },
+  "ambient.wind_gust": {
+    "subtitle": "winterwonderland.subtitle.wind_gust",
+    "sounds": [
+      {
+        "name": "minecraft:block/dry_grass/wind1",
+        "volume": 1.0
+      },
+      {
+        "name": "minecraft:block/dry_grass/wind2",
+        "volume": 1.0
+      },
+      {
+        "name": "minecraft:block/dry_grass/wind3",
+        "volume": 1.0
+      },
+      {
+        "name": "minecraft:block/dry_grass/wind4",
+        "volume": 1.0
+      }
+    ]
+  },
+  "block.snow.crunch": {
+    "sounds": [
+      {
+        "name": "minecraft:block/powder_snow/step1"
+      },
+      {
+        "name": "minecraft:block/powder_snow/step2"
+      },
+      {
+        "name": "minecraft:block/powder_snow/step3"
+      },
+      {
+        "name": "minecraft:block/powder_snow/step4"
+      }
+    ]
+  },
+  "ambient.fire_crackle": {
+    "subtitle": "winterwonderland.subtitle.fire_crackle",
+    "sounds": [
+      {
+        "name": "minecraft:block/campfire/crackle1"
+      },
+      {
+        "name": "minecraft:block/campfire/crackle2"
+      },
+      {
+        "name": "minecraft:block/campfire/crackle3"
+      },
+      {
+        "name": "minecraft:block/campfire/crackle4"
+      },
+      {
+        "name": "minecraft:block/furnace/fire_crackle1",
+        "volume": 0.6
+      },
+      {
+        "name": "minecraft:block/furnace/fire_crackle2",
+        "volume": 0.6
+      },
+      {
+        "name": "minecraft:block/furnace/fire_crackle3",
+        "volume": 0.6
+      },
+      {
+        "name": "minecraft:block/furnace/fire_crackle4",
+        "volume": 0.6
+      }
+    ]
+  }
+}

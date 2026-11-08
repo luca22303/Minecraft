@@ -95,6 +95,25 @@ possible.
 
 ## Version 0.1 – first playable build
 
+**Status: implemented** (not yet playtested in-game). Notes on how it was built:
+
+- Vanilla rain = snowfall, vanilla thunderstorm = blizzard, so the weather cycle and `/weather`
+  commands keep working. Blizzards are silent (no lightning in snow).
+- Graded winter works by lowering each biome's temperature by climate class (cold / temperate /
+  warm, from the biome's base temperature). The Nether and End are excluded via biome tags.
+- Snow on tree canopies is vanilla behaviour once a biome is cold; the frosted leaf *look* is done
+  with wintry foliage colors (a white snow-top overlay on leaves is a possible later addition).
+- Snow on window sills: glass blocks and full-block sills already collect snow. Snow on top of
+  glass *panes* needs a custom model and is postponed.
+- Warm glow is a subtle warm block-light tint; a visible halo around light sources is postponed.
+- Crisper, bluer clear-day skies are postponed (fog tint is done).
+- Sounds use vanilla sound files via our own sound events, ready to be swapped for custom files.
+
+Known side effect: like vanilla thunderstorms, blizzards darken the sky enough for hostile mobs to
+spawn during the day.
+
+Original plan:
+
 A first version of **every** feature above, so the whole mod can be felt early,
 then each feature gets deepened in later versions based on playtesting.
 

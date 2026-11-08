@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "size=1": {
+      "model": "winterwonderland:block/icicle_1"
+    },
+    "size=2": {
+      "model": "winterwonderland:block/icicle_2"
+    },
+    "size=3": {
+      "model": "winterwonderland:block/icicle_3"
+    }
+  }
+}

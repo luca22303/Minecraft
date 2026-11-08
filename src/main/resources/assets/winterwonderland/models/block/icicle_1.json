@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "winterwonderland:block/icicle_1"
+  }
+}

@@ -2,7 +2,12 @@
 	"required": true,
 	"package": "io.github.luca22303.winterwonderland.mixin",
 	"compatibilityLevel": "JAVA_25",
-	"mixins": [],
+	"mixins": [
+		"BiomeMixin",
+		"EntityMixin",
+		"LivingEntityMixin",
+		"ServerLevelMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	},

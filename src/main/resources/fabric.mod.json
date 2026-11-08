@@ -19,6 +19,9 @@
 		],
 		"client": [
 			"io.github.luca22303.winterwonderland.client.WinterWonderlandClient"
+		],
+		"modmenu": [
+			"io.github.luca22303.winterwonderland.client.config.ModMenuIntegration"
 		]
 	},
 	"mixins": [
@@ -33,5 +36,8 @@
 		"minecraft": "~26.3",
 		"java": ">=25",
 		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
 	}
 }
