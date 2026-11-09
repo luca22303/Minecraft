@@ -2,7 +2,7 @@ package io.github.luca22303.winterwonderland.winter;
 
 import io.github.luca22303.winterwonderland.block.IcicleBlock;
 import io.github.luca22303.winterwonderland.block.ModBlocks;
-import io.github.luca22303.winterwonderland.block.PaneSnowBlock;
+import io.github.luca22303.winterwonderland.block.LedgeSnowBlock;
 import io.github.luca22303.winterwonderland.config.WinterConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -46,21 +46,25 @@ public final class SnowAndIce {
 			tryFormIcicle(level, top);
 		}
 
-		if (config.snowOnPanes && level.isRaining()) {
-			trySnowOnPane(level, top);
+		if ((config.snowOnPanes || config.snowOnFencesAndWalls) && level.isRaining()) {
+			trySnowOnLedge(level, top, config);
 		}
 	}
 
-	/** During snowfall, a thin ridge of snow settles on top of exposed glass panes and iron bars. */
-	private static void trySnowOnPane(ServerLevel level, BlockPos top) {
-		BlockState pane = level.getBlockState(top.below());
-		if (!PaneSnowBlock.isPane(pane) || !level.getBlockState(top).isAir()) {
+	/** During snowfall, snow settles on top of exposed glass panes, iron bars, fences and walls. */
+	private static void trySnowOnLedge(ServerLevel level, BlockPos top, WinterConfig config) {
+		if (!level.getBlockState(top).isAir()) {
+			return;
+		}
+		BlockState ledge = level.getBlockState(top.below());
+		LedgeSnowBlock snow = ModBlocks.ledgeSnowFor(ledge).orElse(null);
+		if (snow == null || !(snow == ModBlocks.PANE_SNOW ? config.snowOnPanes : config.snowOnFencesAndWalls)) {
 			return;
 		}
 		if (level.getBrightness(LightLayer.BLOCK, top) >= 10 || !level.getBiome(top).value().coldEnoughToSnow(top, level.getSeaLevel())) {
 			return;
 		}
-		level.setBlockAndUpdate(top, ModBlocks.PANE_SNOW.shapedFor(pane));
+		level.setBlockAndUpdate(top, snow.shapedFor(ledge));
 	}
 
 	/** Deep snow sinks back by one layer, but never below a single layer. */

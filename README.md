@@ -4,7 +4,7 @@ A cozy, immersive winter ambience mod for **Minecraft 26.3** (Fabric).
 Designed to be combined with world-generation mods and shaders for a snowy winter playthrough.
 See [DESIGN.md](DESIGN.md) for the full plan.
 
-## Features (v0.2)
+## Features (v0.3)
 
 **Snowy world**
 - **Graded winter by biome.** Cold biomes get heavy snow, temperate biomes regular snow, and warm
@@ -14,8 +14,9 @@ See [DESIGN.md](DESIGN.md) for the full plan.
 - **Deeper snow:** up to 3 layers by default. Deep snow melts back to one layer on clear days.
 - **Snowy treetops:** canopies facing the open sky get white snow caps in snowy biomes, and real snow
   layers settle on them too.
-- **Snow on panes:** a thin ridge of snow settles on top of glass panes and iron bars during snowfall
-  and melts on clear days. Living Glass handles the glass itself.
+- **Snow on panes, fences and walls:** during snowfall, snow settles on top of glass panes, iron
+  bars, fence posts and rails, and along wall tops. It follows their shape and melts on clear days or
+  near light. Living Glass handles the glass itself.
 - **Icicles** slowly grow under roof edges and overhangs. They melt near torches, fire and other light,
   and drip a little on sunny days.
 - **Wintry colors:** grass and leaves (including spruce and birch) take on muted, frosty colors.

@@ -63,5 +63,9 @@
   "winterwonderland.config.snowy_leaf_tops": "Snowy Treetops",
   "winterwonderland.config.snowy_leaf_tops.tooltip": "White snow caps on top of tree canopies in snowy biomes.",
   "winterwonderland.config.winter_sky": "Winter Sky",
-  "winterwonderland.config.winter_sky.tooltip": "Crisper, deeper blue skies on clear winter days."
+  "winterwonderland.config.winter_sky.tooltip": "Crisper, deeper blue skies on clear winter days.",
+  "block.winterwonderland.fence_snow": "Snow on Fence",
+  "block.winterwonderland.wall_snow": "Snow on Wall",
+  "winterwonderland.config.snow_on_fences_and_walls": "Snow on Fences & Walls",
+  "winterwonderland.config.snow_on_fences_and_walls.tooltip": "Snow settles on fence posts and rails and along the top of walls during snowfall."
 }

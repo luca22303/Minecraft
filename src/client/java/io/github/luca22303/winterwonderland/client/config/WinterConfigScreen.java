@@ -43,6 +43,7 @@ public class WinterConfigScreen extends OptionsSubScreen {
 			toggle("freeze_water", config.freezeWater, v -> config.freezeWater = v),
 			toggle("icicles", config.icicles, v -> config.icicles = v),
 			toggle("snow_on_panes", config.snowOnPanes, v -> config.snowOnPanes = v),
+			toggle("snow_on_fences_and_walls", config.snowOnFencesAndWalls, v -> config.snowOnFencesAndWalls = v),
 			toggle("calm_blizzards", config.calmBlizzards, v -> config.calmBlizzards = v)
 		);
 

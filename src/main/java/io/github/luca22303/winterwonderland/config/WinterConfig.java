@@ -34,6 +34,8 @@ public class WinterConfig {
 	public boolean icicles = true;
 	/** Snow settles on top of glass panes and iron bars. */
 	public boolean snowOnPanes = true;
+	/** Snow settles on fence posts and rails and on top of walls. */
+	public boolean snowOnFencesAndWalls = true;
 	/** Blizzards don't let monsters spawn in daylight (vanilla thunderstorms do). */
 	public boolean calmBlizzards = true;
 

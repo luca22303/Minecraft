@@ -127,7 +127,19 @@ spawn during the day. *(Fixed in 0.2 with the "Calm Blizzards" option.)*
   days in wintry biomes.
 - **Calm blizzards:** blizzards no longer count as thunderstorms for daytime monster spawning.
 
-Ideas for later: snow on fences and walls, custom wind and fire sounds, decorations, winter food.
+## Version 0.3 – snow on fences and walls
+
+**Status: implemented** (not yet playtested in-game).
+
+- Pane snow is now one of three "ledge snow" blocks (`pane_snow`, `fence_snow`, `wall_snow`). They
+  share the same formation and melting logic, and each follows the connections of the block below.
+- Fences: a cap on the post, plus thin snow on the top rails.
+- Walls: a cap on the post (when the wall has one), plus snow along the wall segments.
+- Wall segments top out 2 px below the block and fence rails 1 px below. The snow lives in the air
+  block above, so its model reaches down into the block below.
+- New setting "Snow on Fences & Walls".
+
+Ideas for later: custom wind and fire sounds, decorations, winter food.
 
 Original plan:
 
