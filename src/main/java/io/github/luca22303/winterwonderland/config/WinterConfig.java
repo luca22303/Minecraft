@@ -32,6 +32,10 @@ public class WinterConfig {
 	public boolean freezeWater = true;
 	/** Icicles grow under roof edges and overhangs. */
 	public boolean icicles = true;
+	/** Snow settles on top of glass panes and iron bars. */
+	public boolean snowOnPanes = true;
+	/** Blizzards don't let monsters spawn in daylight (vanilla thunderstorms do). */
+	public boolean calmBlizzards = true;
 
 	// --- Visuals ---
 	/** Grass and foliage shift to muted, frosty winter colors. Requires a chunk reload (F3+A) to apply. */
@@ -42,6 +46,14 @@ public class WinterConfig {
 	/** Snowflake particle density in percent. */
 	public int snowflakeDensity = 100;
 	public boolean frostyBreath = true;
+	/** White snow caps on top of tree canopies. Requires a chunk reload (F3+A) to apply. */
+	public boolean snowyLeafTops = true;
+	/** Crisper, deeper blue skies on clear winter days. */
+	public boolean winterSky = true;
+	/** Soft glowing halos around lanterns, torches and other lights. */
+	public boolean glowHalos = true;
+	/** Halo strength in percent. */
+	public int haloStrength = 50;
 	public boolean winterFog = true;
 	/** Fog strength in percent. */
 	public int fogStrength = 100;
@@ -101,6 +113,7 @@ public class WinterConfig {
 		snowflakeDensity = clamp(snowflakeDensity, 0, 300);
 		fogStrength = clamp(fogStrength, 0, 100);
 		warmGlowStrength = clamp(warmGlowStrength, 0, 100);
+		haloStrength = clamp(haloStrength, 0, 100);
 		windPushStrength = clamp(windPushStrength, 0, 30);
 		windVolume = clamp(windVolume, 0, 200);
 	}

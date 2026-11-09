@@ -10,6 +10,8 @@ public final class ModParticles {
 	public static final SimpleParticleType SNOWFLAKE = register("snowflake");
 	/** A small puff of frosty breath. */
 	public static final SimpleParticleType BREATH = register("breath");
+	/** A soft glowing halo around a light source (client-side only, managed by the halo system). */
+	public static final SimpleParticleType HALO = register("halo");
 
 	private ModParticles() {
 	}

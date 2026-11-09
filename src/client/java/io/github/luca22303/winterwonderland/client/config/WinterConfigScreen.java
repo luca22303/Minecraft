@@ -21,6 +21,7 @@ public class WinterConfigScreen extends OptionsSubScreen {
 	private boolean colorsBefore;
 	private int colorStrengthBefore;
 	private boolean winterBefore;
+	private boolean leafTopsBefore;
 
 	public WinterConfigScreen(Screen parent) {
 		super(parent, Minecraft.getInstance().options, Component.translatable(PREFIX + "title"));
@@ -31,6 +32,7 @@ public class WinterConfigScreen extends OptionsSubScreen {
 		colorsBefore = config.wintryColors;
 		colorStrengthBefore = config.wintryColorStrength;
 		winterBefore = config.winterWorld;
+		leafTopsBefore = config.snowyLeafTops;
 		appliers.clear();
 
 		this.list.addHeader(Component.translatable(PREFIX + "section.world"));
@@ -39,7 +41,9 @@ public class WinterConfigScreen extends OptionsSubScreen {
 			slider("max_snow_layers", 1, 8, config.maxSnowLayers, "", v -> config.maxSnowLayers = v),
 			toggle("melt_on_clear_days", config.meltOnClearDays, v -> config.meltOnClearDays = v),
 			toggle("freeze_water", config.freezeWater, v -> config.freezeWater = v),
-			toggle("icicles", config.icicles, v -> config.icicles = v)
+			toggle("icicles", config.icicles, v -> config.icicles = v),
+			toggle("snow_on_panes", config.snowOnPanes, v -> config.snowOnPanes = v),
+			toggle("calm_blizzards", config.calmBlizzards, v -> config.calmBlizzards = v)
 		);
 
 		this.list.addHeader(Component.translatable(PREFIX + "section.visuals"));
@@ -52,6 +56,10 @@ public class WinterConfigScreen extends OptionsSubScreen {
 			slider("fog_strength", 0, 100, config.fogStrength, "%", v -> config.fogStrength = v),
 			toggle("warm_glow", config.warmGlow, v -> config.warmGlow = v),
 			slider("warm_glow_strength", 0, 100, config.warmGlowStrength, "%", v -> config.warmGlowStrength = v),
+			toggle("glow_halos", config.glowHalos, v -> config.glowHalos = v),
+			slider("halo_strength", 0, 100, config.haloStrength, "%", v -> config.haloStrength = v),
+			toggle("snowy_leaf_tops", config.snowyLeafTops, v -> config.snowyLeafTops = v),
+			toggle("winter_sky", config.winterSky, v -> config.winterSky = v),
 			toggle("frosty_breath", config.frostyBreath, v -> config.frostyBreath = v)
 		);
 
@@ -103,7 +111,8 @@ public class WinterConfigScreen extends OptionsSubScreen {
 		appliers.forEach(Runnable::run);
 		WinterConfig.save();
 		// Biome colors are baked into chunk meshes, so rebuild them when the colors change.
-		if (colorsBefore != config.wintryColors || colorStrengthBefore != config.wintryColorStrength || winterBefore != config.winterWorld) {
+		if (colorsBefore != config.wintryColors || colorStrengthBefore != config.wintryColorStrength || winterBefore != config.winterWorld
+			|| leafTopsBefore != config.snowyLeafTops) {
 			if (this.minecraft.level != null) {
 				this.minecraft.levelExtractor.allChanged();
 			}

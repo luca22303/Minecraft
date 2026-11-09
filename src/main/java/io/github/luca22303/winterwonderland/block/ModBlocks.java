@@ -26,6 +26,18 @@ public final class ModBlocks {
 		.sound(SoundType.GLASS)
 		.pushReaction(PushReaction.POPPED));
 
+	/** Snow lying on top of glass panes and iron bars. Forms naturally only. */
+	public static final PaneSnowBlock PANE_SNOW = (PaneSnowBlock) register("pane_snow", PaneSnowBlock::new, BlockBehaviour.Properties.of()
+		.mapColor(MapColor.SNOW)
+		.noCollision()
+		.noOcclusion()
+		.instabreak()
+		.randomTicks()
+		.replaceable()
+		.noLootTable()
+		.sound(SoundType.SNOW)
+		.pushReaction(PushReaction.POPPED));
+
 	private ModBlocks() {
 	}
 

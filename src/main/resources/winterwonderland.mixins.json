@@ -6,6 +6,7 @@
 		"BiomeMixin",
 		"EntityMixin",
 		"LivingEntityMixin",
+		"MonsterMixin",
 		"ServerLevelMixin"
 	],
 	"injectors": {

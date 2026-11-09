@@ -2,6 +2,7 @@ package io.github.luca22303.winterwonderland.winter;
 
 import io.github.luca22303.winterwonderland.block.IcicleBlock;
 import io.github.luca22303.winterwonderland.block.ModBlocks;
+import io.github.luca22303.winterwonderland.block.PaneSnowBlock;
 import io.github.luca22303.winterwonderland.config.WinterConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -44,6 +45,22 @@ public final class SnowAndIce {
 		if (config.icicles && level.getRandom().nextInt(ICICLE_CHANCE) == 0) {
 			tryFormIcicle(level, top);
 		}
+
+		if (config.snowOnPanes && level.isRaining()) {
+			trySnowOnPane(level, top);
+		}
+	}
+
+	/** During snowfall, a thin ridge of snow settles on top of exposed glass panes and iron bars. */
+	private static void trySnowOnPane(ServerLevel level, BlockPos top) {
+		BlockState pane = level.getBlockState(top.below());
+		if (!PaneSnowBlock.isPane(pane) || !level.getBlockState(top).isAir()) {
+			return;
+		}
+		if (level.getBrightness(LightLayer.BLOCK, top) >= 10 || !level.getBiome(top).value().coldEnoughToSnow(top, level.getSeaLevel())) {
+			return;
+		}
+		level.setBlockAndUpdate(top, ModBlocks.PANE_SNOW.shapedFor(pane));
 	}
 
 	/** Deep snow sinks back by one layer, but never below a single layer. */

@@ -102,6 +102,7 @@ public final class WinterAmbience {
 		if (config.fireCrackle && level.getGameTime() % 25 == 0) {
 			playFireCrackle(level, player);
 		}
+		GlowHalos.tick(minecraft, level, player);
 	}
 
 	// ---------------------------------------------------------------- snowflakes

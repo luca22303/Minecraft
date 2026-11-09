@@ -50,5 +50,18 @@
   "winterwonderland.config.fire_crackle": "Fire Crackle",
   "winterwonderland.config.fire_crackle.tooltip": "Cozy crackling near fires, campfires and lit furnaces.",
   "winterwonderland.config.muffle_indoors": "Muffle Indoors",
-  "winterwonderland.config.muffle_indoors.tooltip": "Wind and weather sounds get much quieter when you're inside."
+  "winterwonderland.config.muffle_indoors.tooltip": "Wind and weather sounds get much quieter when you're inside.",
+  "block.winterwonderland.pane_snow": "Snow on Pane",
+  "winterwonderland.config.snow_on_panes": "Snow on Panes",
+  "winterwonderland.config.snow_on_panes.tooltip": "A thin ridge of snow settles on top of glass panes and iron bars during snowfall.",
+  "winterwonderland.config.calm_blizzards": "Calm Blizzards",
+  "winterwonderland.config.calm_blizzards.tooltip": "Blizzards don't let monsters spawn in daylight (normal thunderstorms would).",
+  "winterwonderland.config.glow_halos": "Glow Halos",
+  "winterwonderland.config.glow_halos.tooltip": "Soft glowing halos around lanterns, torches, candles and campfires - strongest at night and in snowfall.",
+  "winterwonderland.config.halo_strength": "Halo Strength",
+  "winterwonderland.config.halo_strength.tooltip": "How bright the glow halos are. Keep it low when using shaders with bloom.",
+  "winterwonderland.config.snowy_leaf_tops": "Snowy Treetops",
+  "winterwonderland.config.snowy_leaf_tops.tooltip": "White snow caps on top of tree canopies in snowy biomes.",
+  "winterwonderland.config.winter_sky": "Winter Sky",
+  "winterwonderland.config.winter_sky.tooltip": "Crisper, deeper blue skies on clear winter days."
 }

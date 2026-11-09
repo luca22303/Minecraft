@@ -1,0 +1,77 @@
+{
+  "textures": {
+    "snow": "minecraft:block/snow",
+    "particle": "minecraft:block/snow"
+  },
+  "elements": [
+    {
+      "from": [
+        6.5,
+        0,
+        6.5
+      ],
+      "to": [
+        9.5,
+        2,
+        9.5
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            6.5,
+            6.5,
+            9.5,
+            9.5
+          ],
+          "texture": "#snow"
+        },
+        "down": {
+          "uv": [
+            6.5,
+            6.5,
+            9.5,
+            9.5
+          ],
+          "texture": "#snow",
+          "cullface": "down"
+        },
+        "north": {
+          "uv": [
+            6.5,
+            14,
+            9.5,
+            16
+          ],
+          "texture": "#snow"
+        },
+        "south": {
+          "uv": [
+            6.5,
+            14,
+            9.5,
+            16
+          ],
+          "texture": "#snow"
+        },
+        "east": {
+          "uv": [
+            6.5,
+            14,
+            9.5,
+            16
+          ],
+          "texture": "#snow"
+        },
+        "west": {
+          "uv": [
+            6.5,
+            14,
+            9.5,
+            16
+          ],
+          "texture": "#snow"
+        }
+      }
+    }
+  ]
+}

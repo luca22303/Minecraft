@@ -5,6 +5,7 @@
 	"client": [
 		"AtmosphericFogEnvironmentMixin",
 		"BiomeColorMixin",
+		"ClientLevelMixin",
 		"LightmapRenderStateExtractorMixin",
 		"WeatherEffectRendererMixin"
 	],

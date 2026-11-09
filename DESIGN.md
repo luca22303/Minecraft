@@ -110,7 +110,24 @@ possible.
 - Sounds use vanilla sound files via our own sound events, ready to be swapped for custom files.
 
 Known side effect: like vanilla thunderstorms, blizzards darken the sky enough for hostile mobs to
-spawn during the day.
+spawn during the day. *(Fixed in 0.2 with the "Calm Blizzards" option.)*
+
+## Version 0.2 – the postponed parts
+
+**Status: implemented** (not yet playtested in-game).
+
+- **Snow on panes:** a `pane_snow` block that forms on top of glass panes and iron bars during
+  snowfall, follows the pane's connections, and melts on clear days or near light.
+- **Snowy treetops:** the vanilla leaf models of oak, spruce, birch, jungle, acacia, dark oak and
+  mangrove get a second "snow cap" layer. Its tint is white on canopy tops under open sky in snowy
+  biomes, and transparent everywhere else. Inventory icons keep the plain look.
+- **Glow halos:** client-side halo particles around non-solid light sources such as lanterns,
+  torches, candles, campfires and end rods. They are brighter at night, indoors and in snowfall.
+- **Crisp winter sky:** a positional sky-color layer on the client that deepens the blue on clear
+  days in wintry biomes.
+- **Calm blizzards:** blizzards no longer count as thunderstorms for daytime monster spawning.
+
+Ideas for later: snow on fences and walls, custom wind and fire sounds, decorations, winter food.
 
 Original plan:
 
